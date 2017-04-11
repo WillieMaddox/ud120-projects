@@ -19,4 +19,20 @@ import pickle
 
 enron_data = pickle.load(open("../final_project/final_project_dataset.pkl", "r"))
 
+for person, attributes in enron_data.iteritems():
+    if attributes["poi"] == 1:
+        print person
 
+i = 0
+for person, attributes in enron_data.iteritems():
+    if attributes["email_address"] != 'NaN':
+        i += 1
+print i
+
+i = 0
+for person, attributes in enron_data.iteritems():
+    if attributes["salary"] != 'NaN':
+        i += 1
+print i
+
+print len(enron_data)
