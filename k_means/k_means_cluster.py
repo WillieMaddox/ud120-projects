@@ -17,6 +17,7 @@ from sklearn.cluster import KMeans
 from sklearn.preprocessing import MinMaxScaler
 import numpy as np
 
+
 def Draw(pred, features, poi, mark_poi=False, name="image.png", f1_name="feature 1", f2_name="feature 2"):
     """ some plotting code designed to help you visualize your clusters """
 
@@ -41,7 +42,6 @@ def Draw(pred, features, poi, mark_poi=False, name="image.png", f1_name="feature
 data_dict = pickle.load(open("../final_project/final_project_dataset.pkl", "r"))
 # there's an outlier--remove it!
 data_dict.pop("TOTAL", 0)
-
 
 # the input features we want to use
 # can be any key in the person-level dictionary (salary, director_fees, etc.)
